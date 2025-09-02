@@ -1,5 +1,6 @@
 from turtle import Screen
 from player import Player
+from car import Car
 import time
 
 screen = Screen()
@@ -8,6 +9,7 @@ screen.title("Turtle Crossing")
 screen.tracer(0)
 
 player = Player()
+car = Car()
 
 screen.onkeypress(key="Up", fun=player.move)
 screen.listen()
