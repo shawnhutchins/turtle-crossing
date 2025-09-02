@@ -1,10 +1,13 @@
-from turtle import Turtle, Screen
+from turtle import Screen
+from player import Player
 import time
 
 screen = Screen()
 screen.setup(600, 600)
 screen.title("Turtle Crossing")
 screen.tracer(0)
+
+player = Player()
 
 game_is_on = True
 while game_is_on:
