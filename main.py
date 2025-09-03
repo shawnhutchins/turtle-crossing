@@ -17,7 +17,9 @@ screen.listen()
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
-
+    car.move()
+    if car.xcor() < -320:
+        car.restart()
     screen.update()
 
 screen.exitonclick()
