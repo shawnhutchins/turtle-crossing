@@ -29,6 +29,8 @@ while game_is_on:
     # update cars
     for car in cars:
         car.move()
+        if car.xcor() <= -320:
+            cars.remove(car)
 
     screen.update()
     loopcount += 1
