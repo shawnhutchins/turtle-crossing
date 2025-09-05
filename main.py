@@ -8,6 +8,13 @@ screen = Screen()
 screen.setup(600, 600)
 screen.title("Turtle Crossing")
 screen.tracer(0)
+screen.colormode(255)
+
+def generate_color():
+    r = randint(0, 255)
+    g = randint(0, 255)
+    b = randint(0, 255)
+    return r, g, b
 
 player = Player()
 cars = []
@@ -23,7 +30,7 @@ while game_is_on:
     # generate cars
     if loopcount >= 6:
         randycord = randint(-250, 250)
-        cars.append(Car(randycord))
+        cars.append(Car(randycord, generate_color()))
         loopcount = 0
 
     # update cars
