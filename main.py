@@ -25,7 +25,10 @@ screen.onkeypress(key="Up", fun=player.move)
 screen.listen()
 
 loop_count = 1
+car_move_increment = 10
+MOVE_INCREASE = 4
 game_is_on = True
+
 while game_is_on:
     time.sleep(0.1)
 
@@ -37,7 +40,7 @@ while game_is_on:
 
     # update cars
     for car in cars:
-        car.move()
+        car.move(car_move_increment)
         if car.xcor() <= -320:
             cars.remove(car)
 
@@ -49,6 +52,7 @@ while game_is_on:
     # check is player has reached the finish line
     if player.ycor() >= FINISH_LINE_Y:
         player.move_to_start()
+        car_move_increment += MOVE_INCREASE
 
     screen.update()
     loop_count += 1
