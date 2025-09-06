@@ -4,6 +4,8 @@ from car import Car
 from random import randint
 import time
 
+FINISH_LINE_Y = 280
+
 screen = Screen()
 screen.setup(600, 600)
 screen.title("Turtle Crossing")
@@ -38,6 +40,9 @@ while game_is_on:
         car.move()
         if car.xcor() <= -320:
             cars.remove(car)
+
+    if player.ycor() >= FINISH_LINE_Y:
+        player.move_to_start()
 
     screen.update()
     loopcount += 1
