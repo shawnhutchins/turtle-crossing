@@ -24,16 +24,16 @@ cars = []
 screen.onkeypress(key="Up", fun=player.move)
 screen.listen()
 
-loopcount = 1
+loop_count = 1
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
 
     # generate cars
-    if loopcount >= 6:
-        randycord = randint(-250, 250)
-        cars.append(Car(randycord, generate_color()))
-        loopcount = 0
+    if loop_count >= 6:
+        random_y_cor = randint(-250, 250)
+        cars.append(Car(random_y_cor, generate_color()))
+        loop_count = 0
 
     # update cars
     for car in cars:
@@ -51,6 +51,6 @@ while game_is_on:
         player.move_to_start()
 
     screen.update()
-    loopcount += 1
+    loop_count += 1
 
 screen.exitonclick()
