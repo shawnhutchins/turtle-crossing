@@ -11,5 +11,5 @@ class Car(Turtle):
         self.shapesize(1, 2)
         self.goto(320, randomy)
 
-    def move(self):
-        self.forward(10)
+    def move(self, increment):
+        self.forward(increment)
