@@ -47,7 +47,7 @@ while game_is_on:
     # check if the player has collided with a car
     for car in cars:
         if player.distance(car.position()) < 30 and (player.ycor() - car.ycor()) * -1 <= 20:
-            player.move_to_start()
+            game_is_on = False
 
     # check is player has reached the finish line
     if player.ycor() >= FINISH_LINE_Y:
