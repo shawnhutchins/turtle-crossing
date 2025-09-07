@@ -53,6 +53,8 @@ while game_is_on:
 
     # check is player has reached the finish line
     if player.ycor() >= FINISH_LINE_Y:
+        scoreboard.level += 1
+        scoreboard.update_score()
         player.move_to_start()
         car_move_increment += MOVE_INCREASE
 
