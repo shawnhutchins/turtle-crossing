@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+STARTING_POSITION = (0, -280)
 SPEED = 10
 
 class Player(Turtle):
@@ -15,4 +16,4 @@ class Player(Turtle):
         self.forward(SPEED)
 
     def move_to_start(self):
-        self.goto(0, -280)
+        self.goto(STARTING_POSITION)
