@@ -1,6 +1,7 @@
 from turtle import Screen
 from player import Player
 from car import Car
+from scoreboard import Scoreboard
 from random import randint
 import time
 
@@ -18,6 +19,7 @@ def generate_color():
     b = randint(0, 255)
     return r, g, b
 
+scoreboard = Scoreboard()
 player = Player()
 cars = []
 
