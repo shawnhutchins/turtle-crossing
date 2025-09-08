@@ -1,0 +1,12 @@
+Post Project Notes
+
+After completing the turtle-crossing project I watched how the instructor completed the project.
+These are some notes on how she and I did things differently.
+
+- Instead of creating a car class and managing the cars from the main.py file, she made a car manager class.
+    - Her way seems like a better approach to grouping all the car logic.
+    - Cars are not that different from a base turtle so it makes sense that you wouldn't need a car class separate
+        from the car manager.
+
+- Instead of counting loop iterations to spawn a car every 6th loop, she used a random int from 1 - 6 in the generate
+    cars method in her car manager class.
