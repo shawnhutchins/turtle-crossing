@@ -10,3 +10,10 @@ These are some notes on how she and I did things differently.
 
 - Instead of counting loop iterations to spawn a car every 6th loop, she used a random int from 1 - 6 in the generate
     cars method in her car manager class.
+
+- When detecting if the player has collided with a car she kept things simple and only checked if the player is within
+    20 of the player instead of trying to make the detection true the the shape of the cars (cars are not squares).
+    - This is very pragmatic and if the game still feels good then I don't think the detail matters.
+
+- She used may more constants than I did. I am learning to spot opportunities to use more constants.
+    - Using a constant for the font used in the score board felt especially nice.
