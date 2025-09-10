@@ -17,3 +17,7 @@ These are some notes on how she and I did things differently.
 
 - She used may more constants than I did. I am learning to spot opportunities to use more constants.
     - Using a constant for the font used in the score board felt especially nice.
+
+- She created a method in the score board class to increment the level while I manually incremented level in the
+    main loop.
+    - Creating a method in the class makes more sense for modularity.
